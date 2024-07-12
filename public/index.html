@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Site Exemplo</title>
+</head>
+<body>
+    <h1>Bem vindo ao site de Exemplo</h1>
+    <button id="login">Login:</button>
+    <div id="loginForm" style="display:none;">
+        <input id="username" type="text" placeholder="Username">
+        <input id="password" type="password" placeholder="Password">
+        <button id="loginSubmit">Submit</button>
+    </div>
+    <input type="text" name="q" placeholder="Procurar">
+    <div id="product_1" style="display:none;">
+        <button id="addToCart">Add to Cart</button>
+    </div>
+    <div id="cart" style="display:none;">
+        <button id="checkout">Checkout</button>
+    </div>
+    <div id="checkoutPage" style="display:none;">
+        <button id="placeOrder">Place Order</button>
+    </div>
+    <div id="confirmationMessage" style="display:none;">Obrigado!</div>
+
+    <script>
+        document.getElementById('login').addEventListener('click', () => {
+            document.getElementById('loginForm').style.display = 'block';
+        });
+        
+        document.getElementById('loginSubmit').addEventListener('click', () => {
+            document.getElementById('product_1').style.display = 'block';
+        });
+
+        document.getElementById('addToCart').addEventListener('click', () => {
+            document.getElementById('cart').style.display = 'block';
+        });
+
+        document.getElementById('checkout').addEventListener('click', () => {
+            document.getElementById('checkoutPage').style.display = 'block';
+        });
+
+        document.getElementById('placeOrder').addEventListener('click', () => {
+            document.getElementById('confirmationMessage').style.display = 'block';
+        });
+    </script>
+</body>
+</html>
